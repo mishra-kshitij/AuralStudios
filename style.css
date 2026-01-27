@@ -1,0 +1,279 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background for a studio feel */
+    color: #e0e0e0; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    color: #ffffff; /* White for headings */
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+    color: #f0f0f0;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background-color: #bb86fc; /* Elegant purple accent */
+    border-radius: 3px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.hero {
+    background-color: #ffffff; /* White background for hero section */
+    color: #333333; /* Darker text for contrast on white */
+    text-align: center;
+    padding: 120px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: none; /* Remove overlay for white background */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-logo {
+    width: 280px; /* Increased logo size further for better visibility */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)); /* Subtle shadow on white */
+}
+
+.tagline {
+    font-size: 1.8em;
+    margin-bottom: 50px;
+    color: #666666; /* Darker grey for tagline */
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #bb86fc; /* Elegant purple */
+    color: #1a1a1a; /* Dark text on button */
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    box-shadow: 0 5px 15px rgba(187, 134, 252, 0.4);
+}
+
+.btn:hover {
+    background-color: #9c68da; /* Slightly darker purple on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(187, 134, 252, 0.6);
+}
+
+.secondary-btn {
+    background-color: #333333; /* Dark grey for secondary button */
+    color: #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.secondary-btn:hover {
+    background-color: #555555;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.section {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.section:nth-of-type(odd) {
+    background-color: #222222;
+    color: #e0e0e0;
+}
+
+.section:nth-of-type(even) {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-bg {
+    background-color: #0d0d0d;
+    color: #eee;
+}
+
+.dark-bg h2 {
+    color: #f0f0f0;
+}
+
+.dark-bg h2::after {
+    background-color: #bb86fc;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.music-item {
+    background-color: #2c2c2c; /* Darker background for music items */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    color: #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.music-item h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #bb86fc; /* Purple accent for track titles */
+    font-size: 1.5em;
+}
+
+.music-item p {
+    font-size: 0.95em;
+    color: #b0b0b0;
+}
+
+.contact-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.social-links a {
+    color: #bb86fc; /* Purple for social links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.2em; /* Increased icon size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e0baff; /* Lighter purple on hover */
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: #000000;
+    color: #777;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+        width: 220px; /* Adjusted logo size for smaller screens */
+    }
+    .tagline {
+        font-size: 1.4em;
+    }
+    .container {
+        padding: 40px 20px;
+    }
+    .music-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero {
+        min-height: 60vh;
+        padding: 100px 20px;
+    }
+    h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+    .btn {
+        padding: 15px 30px;
+        font-size: 0.95em;
+    }
+    .social-links a {
+        font-size: 1.8em; /* Adjusted icon size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo {
+        width: 180px; /* Adjusted logo size for smallest screens */
+    }
+    .tagline {
+        font-size: 1.1em;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.85em;
+    }
+    .social-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .music-item {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .social-links a {
+        font-size: 1.5em; /* Adjusted icon size for smallest screens */
+    }
+}
